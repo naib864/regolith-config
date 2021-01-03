@@ -8,7 +8,7 @@ polybar launch script in .config/polybar/midnight/launch.sh
 The polybar config mostly comes from [this](https://github.com/adi1090x/polybar-themes) repository and is based on the grayblocks style there. I modified the colors and some stylings.  
 
 ## Additional polybar modules
-[Spotify](https://github.com/mihirlad55/polybar-spotify-module)
+[Spotify](https://github.com/mihirlad55/polybar-spotify-module)  
 [KDEConnect](https://github.com/haideralipunjabi/polybar-kdeconnect)
 
 # GTK theme
@@ -19,3 +19,8 @@ The polybar config mostly comes from [this](https://github.com/adi1090x/polybar-
 
 # Wallpaper
 [Intel Itanium Die shots](https://www.youtube.com/watch?v=Lqz5ZtiCmYk) (Link to the pictures in the first comment of the youtube video)
+
+# Fonts
+[Material Design Icons](https://github.com/Templarian/MaterialDesign-Webfont): `apt install fonts-materialdesignicons-webfont` (ships with regolith by default)  
+[Iosevka Nerd Font](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/Iosevka)  
+[Feather Icons](https://feathericons.com/)

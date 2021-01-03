@@ -1,0 +1,87 @@
+// vim:ts=4:sw=4:et
+{
+    // this is a manually added container to restore the vertical split
+    "layout": "splitv",
+    "percent": 0.5,
+    "type": "con",
+    "nodes": [
+		{
+		    // splith split container with 2 children
+		    "border": "pixel",
+		    "floating": "auto_off",
+		    "layout": "splith",
+		    "percent": 0.32,
+		    "type": "con",
+		    "nodes": [
+		        {
+		            "border": "pixel",
+		            "current_border_width": 3,
+		            "floating": "auto_off",
+		            "geometry": {
+		               "height": 650,
+		               "width": 962,
+		               "x": 0,
+		               "y": 0
+		            },
+		            "name": "time",
+		            "percent": 0.32,
+		            "swallows": [
+		               {
+					   "title": "^clock$"
+		               }
+		            ],
+		            "type": "con"
+		        },
+		        {
+		            // splitv split container with 1 children
+		            "border": "pixel",
+		            "floating": "auto_off",
+		            "layout": "splitv",
+		            "percent": 0.68,
+		            "type": "con",
+		            "nodes": [
+		                {
+		                    "border": "pixel",
+		                    "current_border_width": 3,
+		                    "floating": "auto_off",
+		                    "geometry": {
+		                       "height": 650,
+		                       "width": 962,
+		                       "x": 0,
+		                       "y": 0
+		                    },
+		                    "name": "files",
+		                    "percent": 1,
+		                    "swallows": [
+		                       {
+							   "title": "^ranger$"
+		                       }
+		                    ],
+		                    "type": "con"
+		                }
+		            ]
+		        }
+		    ]
+		},
+
+		{
+		    "border": "pixel",
+		    "current_border_width": 3,
+		    "floating": "auto_off",
+		    "geometry": {
+		       "height": 650,
+		       "width": 962,
+		       "x": 0,
+		       "y": 0
+		    },
+		    "name": "system",
+		    "percent": 0.68,
+		    "swallows": [
+		       {
+			   "title": "^bpytop$"
+				}
+		    ],
+		    "type": "con"
+		}
+    ]
+}

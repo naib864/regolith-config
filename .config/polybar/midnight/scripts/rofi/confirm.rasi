@@ -1,0 +1,50 @@
+/* Confirm Dialog */
+
+@import "colors.rasi"
+
+* {
+    background-color:       @bg;
+    text-color:             @fga;
+	font:				 	"Iosevka Nerd Font 15";
+}
+
+window {
+    width:      			210px;
+    padding:    			4px;
+    border:					0px 0px 2px 0px;
+    border-radius:          0px;
+    border-color:           @ac;
+    location:               center;
+    y-offset:               -2em;
+}
+
+prompt {
+    enabled: 						true;
+	padding: 						2px 0px 0px 2px;
+	background-color: 				@al;
+	text-color: 					@fg;
+	font:							"Ubuntu Mono 15";
+}
+
+entry {
+    background-color:               @al;
+    text-color:                     @fg;
+    placeholder-color:              @fg;
+    expand:                         true;
+    horizontal-align:               0;
+	padding: 						2px 0px 0px 2px;
+    blink:                          true;
+}
+
+inputbar {
+	children: 						[ prompt, entry ];
+    background-color:               @bga;
+    text-color:                     @fg;
+    expand:                         false;
+	border:							0px;
+    border-radius:                  0px;
+	border-color:					@ac;
+    margin:                         0px;
+    padding:                        2px;
+}
+

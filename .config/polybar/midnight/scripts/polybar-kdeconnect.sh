@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
 # CONFIGURATION
-LOCATION=3
-YOFFSET=40
-XOFFSET=-150
+LOCATION=0
+YOFFSET=0
+XOFFSET=0
 WIDTH=12
 WIDTH_WIDE=24
 DIR="~/.config/polybar/midnight/scripts/rofi"
@@ -38,7 +38,7 @@ show_devices (){
         istrust="$(qdbus org.kde.kdeconnect "/modules/kdeconnect/devices/$deviceid" org.kde.kdeconnect.device.isTrusted)"
         if [ "$isreach" = "true" ] && [ "$istrust" = "true" ]
         then
-            battery="$(qdbus org.kde.kdeconnect "/modules/kdeconnect/devices/$deviceid" org.kde.kdeconnect.device.battery.charge)"
+            battery="$(qdbus org.kde.kdeconnect "/modules/kdeconnect/devices/$deviceid/battery" org.kde.kdeconnect.device.battery.charge)"
             icon=$(get_icon "$battery" "$devicetype")
             devices+="%{A1:$DIR/polybar-kdeconnect.sh -n '$devicename' -i $deviceid -b $battery -m:}$icon%{A}$SEPERATOR"
         elif [ "$isreach" = "false" ] && [ "$istrust" = "true" ]
@@ -122,3 +122,4 @@ do
         p) show_pmenu ;;
     esac
 done
+

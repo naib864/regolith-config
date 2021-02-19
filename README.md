@@ -5,7 +5,7 @@ i3 config in .config/regolith/i3
 polybar launch script in .config/polybar/midnight/launch.sh
 
 # Polybar files
-The polybar config mostly comes from [this](https://github.com/adi1090x/polybar-themes) repository and is based on the grayblocks style there. I modified the colors and some stylings.  
+The polybar config mostly comes from [this](https://github.com/adi1090x/polybar-themes) repository and is based on the grayblocks style there. Modified everything to suit my needs.
 
 ## Additional polybar modules
 [Spotify](https://github.com/mihirlad55/polybar-spotify-module)  

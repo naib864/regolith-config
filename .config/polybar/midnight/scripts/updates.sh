@@ -22,7 +22,7 @@ while true; do
     fi
 
     # when there are updates available
-    # every 10 seconds another check for updates is done
+    # every 10 minutes another check for updates is done
     while (( UPDATES > 0 )); do
         if (( UPDATES == 1 )); then
             echo " $UPDATES"
@@ -31,15 +31,15 @@ while true; do
         else
             echo " None"
         fi
-        sleep 10
+        sleep 600
         get_total_updates
     done
 
     # when no updates are available, use a longer loop, this saves on CPU
-    # and network uptime, only checking once every 30 min for new updates
+    # and network uptime, only checking once every 60 min for new updates
     while (( UPDATES == 0 )); do
         echo " None"
-        sleep 1800
+        sleep 3600
         get_total_updates
     done
 done

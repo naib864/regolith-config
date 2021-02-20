@@ -23,6 +23,7 @@ COLOR_BATTERY_LOW='#f00'        # Battery <  50
 # Icons shown in Polybar
 ICON_SMARTPHONE=''
 ICON_TABLET=''
+ICON_DESKTOP='󰌣'
 SEPERATOR='|'
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
@@ -93,6 +94,9 @@ get_icon () {
     if [ "$2" = "tablet" ]
     then
         icon=$ICON_TABLET
+    elif [ "$2" = "desktop" ]
+    then
+        icon=$ICON_DESKTOP
     else
         icon=$ICON_SMARTPHONE
     fi
@@ -122,4 +126,3 @@ do
         p) show_pmenu ;;
     esac
 done
-

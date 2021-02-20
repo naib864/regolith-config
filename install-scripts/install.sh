@@ -25,7 +25,7 @@ sudo python3 setup.py install
 cd ..
 
 # install some applications
-for i in gnome-terminal mousepad eog bpytop atom fish kdeconnect gucharmap qt5-tools sddm; do
+for i in gnome-terminal vlc ncdu mousepad eog bpytop atom fish kdeconnect gucharmap qt5-tools sddm; do
   sudo pacman -S $i --noconfirm
 done
 
@@ -43,3 +43,7 @@ sudo pacman -Rs lightdm
 # lock screen setup
 betterlockscreen -u ~/Pictures/itanium/background.jpg
 sudo systemctl enable betterlockscreen@naib864.service
+
+# spotify polybar
+yay -S polybar-spotify-module
+systemctl --user enable spotify-listener

@@ -1,6 +1,14 @@
 # regolith-config
 Collection of files to get my regolith setup up and running.
 
+![Launcher, terminal and file manager](preview/regolith-polybar-midnight-blur1.png "Preview")
+
+![Fancy stuff](preview/regolith-polybar-midnight-blur2.png "Preview")
+
+![Lock screen](preview/regolith-polybar-midnight-blur3.png "Preview")
+
+![SDDM Greeter](preview/regolith-polybar-midnight-blur4.png "Preview")
+
 i3 config in `.config/regolith/i3`  
 polybar launch script in `.config/polybar/midnight/launch.sh`
 

@@ -31,7 +31,7 @@ done
 
 yay -S ttf-material-design-icons-webfont
 
-# set systemd sddm service
+# disable lightdm and set systemd sddm service
 sudo systemctl disable lightdm.service
 sudo systemctl enable sddm.service
 
@@ -41,3 +41,4 @@ sudo pacman -Rs lightdm
 
 # lock screen setup
 betterlockscreen -u Pictures/itanium/background.jpg
+sudo systemctl enable betterlockscreen@naib864.service

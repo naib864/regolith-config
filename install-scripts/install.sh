@@ -16,7 +16,7 @@ cd regolith-rofication
 sudo python3 setup.py install
 cd ~/temp
 
-# install some applications
+# install some applications (replace these with your own stuff)
 for i in gnome-terminal vlc ncdu mousepad eog bpytop atom fish kdeconnect gucharmap qt5-tools sddm; do
   sudo pacman -S $i --noconfirm
 done
@@ -28,7 +28,7 @@ sudo systemctl disable lightdm.service
 sudo systemctl enable sddm.service
 sudo pacman -Rs arcolinux-lightdm-gtk-greeter arcolinux-lightdm-gtk-greeter-settings lightdm
 
-# Remove unused applications and reinstall betterlockscreen
+# Remove unused applications (change that to your choices) and reinstall betterlockscreen as it will be removed by a dependency in the process
 sudo ~/temp/regolith-config/install-scripts/remove-preinstalled.sh
 sudo pacman -S betterlockscreen
 

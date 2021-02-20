@@ -15,8 +15,7 @@ polybar launch script in `.config/polybar/midnight/launch.sh`
 
 
 # Installation
-
-Everything is made under the assumption you are running a fresh install of Arcolinux-i3, as that is my OS of choice. The scripts will work with barebone Arch as well (to some degree, you will have to edit the pacman commands and remove all arcolinux packages)
+The installation scripts are made under the assumption you are running a fresh install of Arcolinux-i3, as that is my OS of choice. The scripts will work with Arch as well (to some degree, you will have to edit the pacman commands and remove all arcolinux packages)
 
 After installation of the OS, do the following:
 

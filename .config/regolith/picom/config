@@ -239,15 +239,14 @@ wintypes : {
 
 opacity-rule = [
 	"90:class_g = 'Gnome-terminal'",
-	"97:class_g = 'Rofi'",		
-	"97:class_g = 'Gnome-system-monitor'",
-	"97:class_g = 'Gnome-control-panel'",
-	"97:class_g = 'floating_window'",
-	"97:class_g = 'Org.gnome.Nautilus'",
-	"97:class_g = 'Polybar'",
+	"90:class_g = 'Rofi'",
+	"95:class_g = 'Gnome-system-monitor'",
+	"95:class_g = 'Gnome-control-panel'",
+	"95:class_g = 'floating_window'",
+	"95:class_g = 'Org.gnome.Nautilus'",
 	"97:class_g = 'Atom'",
-	"97:class_g = 'Mousepad'",
-	"97:class_g = 'Spotify'"
+	"95:class_g = 'Mousepad'",
+	"95:class_g = 'Spotify'",
 ];
 
 # Blur background of transparent windows. Bad performance with X Render backend. GLX backend is preferred.
@@ -262,4 +261,3 @@ blur:
 #	"window_type = 'dock'",
 #	"window_type = 'desktop'"
 #];
-

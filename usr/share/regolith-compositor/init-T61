@@ -1,0 +1,13 @@
+#!/bin/bash
+# See https://regolith-linux.org/docs/customize/compositors/
+
+compositor_PID=$(pidof picom)
+if [ ! -z "$compositor_PID" ]; then
+    kill $compositor_PID
+fi
+
+if [[ -f "$HOME/.config/regolith/picom/config" ]]; then
+  /usr/bin/picom -f --config $HOME/.config/regolith/picom/config
+else
+  /usr/bin/picom -f --config /etc/regolith/picom/config
+fi

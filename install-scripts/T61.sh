@@ -7,3 +7,6 @@ mv ~/config/polybar/midnight/modules/temperature-T61.ini ~/config/polybar/midnig
 # replace bar definitions
 mv ~/config/polybar/midnight/bars/bar-bottom-T61.ini ~/config/polybar/midnight/bars/bar-bottom.ini
 mv ~/config/polybar/midnight/bars/bar-top-T61.ini ~/config/polybar/midnight/bars/bar-top.ini
+
+# no experimental backends (and blur) for T61
+sudo mv /usr/share/regolith-compositor/init-T61 /usr/share/regolith-compositor/init

@@ -25,7 +25,7 @@ sudo python3 setup.py install
 cd ..
 
 # install some applications
-for i in gnome-terminal vlc ncdu mousepad eog bpytop atom fish kdeconnect gucharmap qt5-tools sddm; do
+for i in gnome-terminal betterlockscreen vlc ncdu mousepad eog bpytop atom fish kdeconnect gucharmap qt5-tools sddm; do
   sudo pacman -S $i --noconfirm
 done
 

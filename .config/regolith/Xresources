@@ -20,5 +20,5 @@ gnome.gtk.theme:	Midnight-GrayNight
 gnome.icon.theme:	Qogir-ubuntu
 rofi.theme:		~/.config/polybar/midnight/scripts/rofi/launcher.rasi
 
-i3-wm.program.1:	spotify
-i3-wm.program.2:	xss-lock -- betterlockscreen -l blur -t "Hello there!" --off 10
+#i3-wm.program.1:	spotify
+#i3-wm.program.2:	xss-lock -- betterlockscreen -l blur -t "Hello there!" --off 10

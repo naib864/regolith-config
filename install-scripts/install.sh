@@ -6,7 +6,7 @@ sudo pacman -Syu --noconfirm
 # install yay
 cd ~/temp
 git clone https://aur.archlinux.org/yay.git
-cd yay-git
+cd yay
 makepkg -si
 cd ~/temp
 
@@ -25,7 +25,7 @@ sudo python3 setup.py install
 cd ~/temp
 
 # install some applications (replace these with your own stuff)
-for i in picom gnome-terminal vlc ncdu mousepad eog bpytop atom fish kdeconnect gucharmap qt5-tools qt5-quickcontrols qt5-graphicaleffects sddm; do
+for i in picom gnome-terminal vlc ncdu xorg-xrdb firefox mousepad eog bpytop atom fish kdeconnect gucharmap qt5-tools qt5-quickcontrols qt5-graphicaleffects sddm; do
   sudo pacman -S $i --noconfirm
 done
 
@@ -47,8 +47,8 @@ cp -r ~/temp/regolith-config/.config ~/
 cp -r ~/temp/regolith-config/.local ~/
 chmod +x ~/.config/polybar/midnight/*.sh
 chmod +x ~/.config/polybar/midnight/scripts/*.sh
-cp -r ~/temp/regolith-config/etc /
-cp -r ~/temp/regolith-config/usr /
+sudo cp -r ~/temp/regolith-config/etc /
+sudo cp -r ~/temp/regolith-config/usr /
 cd ~/temp
 
 # lock screen setup

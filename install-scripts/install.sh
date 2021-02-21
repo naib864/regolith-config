@@ -3,6 +3,13 @@
 # full system update
 sudo pacman -Syu --noconfirm
 
+# install yay
+cd ~/temp
+git clone https://aur.archlinux.org/yay.git
+cd yay-git
+makepkg -si
+cd ~/temp
+
 # install regolith
 cd ~/temp
 git clone https://github.com/gardotd426/regolith-de
@@ -10,38 +17,38 @@ cd regolith-de
 makepkg -si
 cd ~/temp
 
-# install rofication for polybar
+# reinstall modified version of rofication manually to work with polybar
 git clone https://github.com/naib864/regolith-rofication
 cd regolith-rofication
+sudo rm /usr/bin/rofication-*
 sudo python3 setup.py install
 cd ~/temp
 
 # install some applications (replace these with your own stuff)
-for i in picom gnome-terminal vlc ncdu mousepad eog bpytop atom fish kdeconnect gucharmap qt5-tools sddm; do
+for i in picom gnome-terminal vlc ncdu mousepad eog bpytop atom fish kdeconnect gucharmap qt5-tools qt5-quickcontrols qt5-graphicaleffects sddm; do
   sudo pacman -S $i --noconfirm
 done
 
 yay -S ttf-material-design-icons-webfont
 
-# disable lightdm and set systemd sddm service
+# disable lightdm and set systemd sddm service (regolith ships with lightdm, so that will be removed)
 sudo systemctl disable lightdm.service
 sudo systemctl enable sddm.service
-sudo pacman -Rs arcolinux-lightdm-gtk-greeter arcolinux-lightdm-gtk-greeter-settings
 sudo pacman -Rs lightdm
 
 # Remove unused applications (change that to your choices) and reinstall betterlockscreen as it will be removed by a dependency in the process
-sudo ~/temp/regolith-config/install-scripts/remove-preinstalled.sh
-sudo pacman -S betterlockscreen
+# sudo ~/temp/regolith-config/install-scripts/remove-preinstalled.sh
+sudo yay -S betterlockscreen
 
 # copy configs etc.
 cd ~/temp/regolith-config
 cp -r ~/temp/regolith-config/Pictures/ ~/
-sudo cp -r ~/temp/regolith-config/.config ~/
-sudo cp -r ~/temp/regolith-config/.local ~/
-sudo chmod +x ~/.config/polybar/midnight/*.sh
-sudo chmod +x ~/.config/polybar/midnight/scripts/*.sh
-sudo cp -r ~/temp/regolith-config/etc /
-sudo cp -r ~/temp/regolith-config/usr /
+cp -r ~/temp/regolith-config/.config ~/
+cp -r ~/temp/regolith-config/.local ~/
+chmod +x ~/.config/polybar/midnight/*.sh
+chmod +x ~/.config/polybar/midnight/scripts/*.sh
+cp -r ~/temp/regolith-config/etc /
+cp -r ~/temp/regolith-config/usr /
 cd ~/temp
 
 # lock screen setup

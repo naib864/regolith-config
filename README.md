@@ -15,8 +15,7 @@ polybar launch script in `.config/polybar/midnight/launch.sh`
 
 
 # Installation
-The installation scripts are made under the assumption you are running a fresh install of Arcolinux-i3, as that is my OS of choice. The scripts will work with Arch as well (to some degree, you will have to edit the pacman commands and remove all arcolinux packages)
-
+The installation scripts are made under the assumption you are running a fresh install of Arch-Linux (with devel). It will probably work on most arch derivatives as well. Arcolinux works, I tested it myself.
 After installation of the OS, do the following:
 
 `mkdir temp && cd temp`   
@@ -25,8 +24,8 @@ After installation of the OS, do the following:
 
 `./regolith-config/install-scripts/install.sh`
 
-This will install the regolith-de with my configs and the themes I used from the sources stated below.
-Sddm will replace lightdm, betterlockscreen will be put in place of the gnome-flashback screensaver, polybar will replace i3-bar.
+This will install the regolith-de, sddm and betterlockscreen with my configs and the themes I used from the sources stated below.
+It will also install some programs I use, so make sure to edit that before using my script.
 
 # Credits
 

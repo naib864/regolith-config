@@ -15,7 +15,7 @@ polybar launch script in `.config/polybar/midnight/launch.sh`
 
 
 # Installation
-The installation scripts are made under the assumption you are running a fresh install of Arch-Linux (with devel). It will probably work on most arch derivatives as well. Arcolinux works, I tested it myself.
+The installation scripts are made under the assumption you are running a fresh install of Arch-Linux (with devel). It will probably work on most arch derivatives as well. Arcolinux works, I tested it myself. WARNING: The scripts are pretty shitty atm, so there is still babysitting needed.
 After installation of the OS, do the following:
 
 `mkdir temp && cd temp`   

@@ -37,7 +37,7 @@ while true; do
         echo " None"
     fi
 
-    # wait 5h, then check again
-	sleep 18000
+    # wait 1min, then check again
+	sleep 60
 	get_total_updates
 done

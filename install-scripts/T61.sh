@@ -1,5 +1,14 @@
 #!/usr/bin/bash
 
+# some programs
+for i in tlp acpi_call tp_smapi; do
+  sudo pacman -S $i --noconfirm
+done
+
+#enable tlp
+sudo systemctl enable tlp
+sudo systemctl start tlp
+
 # replace module definitions
 sudo mv ~/.config/polybar/midnight/modules/network-T61.ini ~/.config/polybar/midnight/modules/network.ini
 sudo mv ~/.config/polybar/midnight/modules/temperature-T61.ini ~/.config/polybar/midnight/modules/temperature.ini

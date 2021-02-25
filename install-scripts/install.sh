@@ -38,7 +38,7 @@ sudo pacman -Rs lightdm
 
 # Remove unused applications (change that to your choices) and reinstall betterlockscreen as it will be removed by a dependency in the process
 # sudo ~/temp/regolith-config/install-scripts/remove-preinstalled.sh
-sudo yay -S betterlockscreen
+yay -S betterlockscreen
 
 # copy configs etc.
 cd ~/temp/regolith-config

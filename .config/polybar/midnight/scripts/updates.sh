@@ -4,6 +4,8 @@ NOTIFY_ICON=/usr/share/icons/Qogir-ubuntu/32/apps/system-software-update.svg
 
 get_total_updates() { UPDATES=$(checkupdates 2>/dev/null | wc -l); }
 
+declare -i updatesold=0
+
 while true; do
     get_total_updates
 
@@ -21,23 +23,28 @@ while true; do
         fi
     fi
 
-    # when there are updates available
-    if (( UPDATES > 0 )); then
-        if (( UPDATES == 1 )); then
-            echo " $UPDATES"
-        elif (( UPDATES > 1 )); then
-            echo " $UPDATES"
-        else
-            echo " None"
+    updatesold=$((UPDATES))
+
+    # Only send a new notification when 5 additional updates arrived
+    while (( UPDATES < updatesold + 5 )); do
+        # when there are updates available
+        if (( UPDATES > 0 )); then
+            if (( UPDATES == 1 )); then
+                echo " $UPDATES"
+            elif (( UPDATES > 1 )); then
+                echo " $UPDATES"
+            else
+                echo " None"
+            fi
         fi
-    fi
 
-    # when no updates are available
-    if (( UPDATES == 0 )); then
-        echo " None"
-    fi
+         # when no updates are available
+         if (( UPDATES == 0 )); then
+             echo " None"
+        fi
 
-    # wait 1min, then check again
-	sleep 60
-	get_total_updates
+        # wait 1min, then check again
+	    sleep 60
+	    get_total_updates
+    done
 done

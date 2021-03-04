@@ -26,7 +26,7 @@ sudo python3 setup.py install
 cd ~/temp
 
 # install some applications (replace these with your own stuff)
-for i in picom pacman-contrib gnome-disk-utility xdg-user-dirs neofetch noto-fonts-cjk noto-fonts-extra noto-fonts-emoji ttf-ubuntu-font-family file-roller gnome-terminal vlc ncdu xorg-xrdb firefox mousepad eog bpytop atom fish kdeconnect gucharmap qt5-tools qt5-quickcontrols qt5-graphicaleffects sddm; do
+for i in picom nano pacman-contrib gnome-disk-utility xdg-user-dirs neofetch noto-fonts-cjk noto-fonts-extra noto-fonts-emoji ttf-ubuntu-font-family file-roller gnome-terminal vlc ncdu xorg-xrdb firefox mousepad eog bpytop atom fish kdeconnect gucharmap qt5-tools qt5-quickcontrols qt5-graphicaleffects sddm; do
   sudo pacman -S $i --noconfirm
 done
 

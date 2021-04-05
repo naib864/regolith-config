@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <theme name="midnight" format="1.3">
-  <color_scheme>Granite</color_scheme>
+  <color_scheme>midnight</color_scheme>
   <background_gradient>0.0</background_gradient>
   <key_style>flat</key_style>
   <roundrect_radius>0.0</roundrect_radius>

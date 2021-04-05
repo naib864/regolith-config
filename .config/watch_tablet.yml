@@ -1,0 +1,10 @@
+input_device: /dev/input/by-path/platform-thinkpad_acpi-event
+# input_device: /dev/input/by-path/pci-0000:00:1f.0-platform-INT33D6:00-event # Dell XPS 9365
+
+modes:
+  laptop:
+    #- xrandr -o 0; xsetwacom set 16 Rotate none; xsetwacom set 9 Rotate none; xsetwacom set 10 Rotate none
+    - machinectl shell naib864@ /usr/bin/dbus-send --type=method_call --print-reply --dest=org.onboard.Onboard /org/onboard/Onboard/Keyboard org.freedesktop.DBus.Properties.Set string:"org.onboard.Onboard.Keyboard" string:"AutoShowPaused" variant:boolean:"true"
+  tablet:
+    #- xrandr -o 2; xsetwacom set 16 Rotate half; xsetwacom set 9 Rotate half; xsetwacom set 10 Rotate half
+    - machinectl shell naib864@ /usr/bin/dbus-send --type=method_call --print-reply --dest=org.onboard.Onboard /org/onboard/Onboard/Keyboard org.freedesktop.DBus.Properties.Set string:"org.onboard.Onboard.Keyboard" string:"AutoShowPaused" variant:boolean:"false"

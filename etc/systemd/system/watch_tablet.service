@@ -1,0 +1,10 @@
+[Unit]
+Description = Service to switch between tablet and desktop mode
+
+[Service]
+Type=simple
+TimeoutStartSec=0
+ExecStart=/usr/bin/watch_tablet
+
+[Install]
+WantedBy=default.target

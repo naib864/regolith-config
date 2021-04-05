@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<theme name="Custom" format="1.3">
+<theme name="midnight" format="1.3">
   <color_scheme>Granite</color_scheme>
   <background_gradient>0.0</background_gradient>
   <key_style>flat</key_style>

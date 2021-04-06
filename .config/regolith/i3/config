@@ -101,7 +101,7 @@ set_from_resource $rofiTheme rofi.theme /etc/regolith/styles/ubuntu-new/rofi.ras
 
 ## Launch // Application // <> Space ##
 set_from_resource $i3-wm.binding.launcher.app i3-wm.binding.launcher.app space
-set_from_resource $i3-wm.program.launcher.app i3-wm.program.launcher.app rofi -show drun -theme $rofiTheme
+set_from_resource $i3-wm.program.launcher.app i3-wm.program.launcher.app rofi -show drun -normal-window -theme $rofiTheme
 bindsym $mod+$i3-wm.binding.launcher.app exec $i3-wm.program.launcher.app
 
 ## Launch // Command // <><Shift> Space ##
@@ -702,6 +702,9 @@ exec --no-startup-id "~/.config/polybar/midnight/launch.sh"
 for_window [class="Gnome-control-center"]	floating disable
 for_window [class="floating_window"]		floating disable
 for_window [class="kdeconnect-settings"]	floating disable
+
+# launch rofi in floating mode
+for_window [class="Rofi"]			floating enable
 
 # load default layouts and launch programs
 # ws1

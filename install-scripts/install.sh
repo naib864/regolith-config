@@ -26,19 +26,22 @@ sudo python3 setup.py install
 cd ~/temp
 
 # install some applications (replace these with your own stuff)
-for i in picom nano pacman-contrib gnome-disk-utility xdg-user-dirs neofetch noto-fonts-cjk noto-fonts-extra noto-fonts-emoji ttf-ubuntu-font-family file-roller gnome-terminal vlc ncdu xorg-xrdb firefox mousepad eog bpytop atom fish kdeconnect gucharmap qt5-tools qt5-quickcontrols qt5-graphicaleffects sddm; do
+for i in picom nano pacman-contrib gnome-disk-utility xdg-user-dirs neofetch noto-fonts-cjk noto-fonts-extra noto-fonts-emoji ttf-ubuntu-font-family file-roller gnome-terminal vlc ncdu xorg-xrdb firefox mousepad eog bpytop atom fish kdeconnect gucharmap qt5-tools gdm grub-theme-vimix; do
   sudo pacman -S $i --noconfirm
 done
 
 yay -S ttf-material-design-icons-webfont
 
-# disable lightdm and set systemd sddm service (regolith ships with lightdm, so that will be removed)
-sudo systemctl disable lightdm.service
-sudo systemctl enable sddm.service
-sudo pacman -Rs lightdm
+# enable gdm + theme
+sudo systemctl enable gdm.service
 
-# Remove unused applications (change that to your choices) and reinstall betterlockscreen as it will be removed by a dependency in the process
-# sudo ~/temp/regolith-config/install-scripts/remove-preinstalled.sh
+cd ~/temp/regolith-config/gdm-theme/theme
+glib-compile-resources gnome-shell-theme.gresource.xml
+sudo cp gnome-shell-theme.gresource /usr/share/gnome-shell
+
+# grub theme
+echo "GRUB_THEME=\"/usr/share/grub/themes/Vimix/theme.txt\""
+
 yay -S betterlockscreen
 
 # copy configs etc.

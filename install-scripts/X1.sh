@@ -9,5 +9,8 @@ done
 sudo systemctl enable tlp
 sudo systemctl start tlp
 
-# tablet mode
-yay -S detect-tablet-mode-git
+# tablet mode and tlpui
+yay -S detect-tablet-mode-git tlpui
+
+# replace bar definitions
+sudo mv ~/.config/polybar/midnight/bars/bar-bottom-X1.ini ~/.config/polybar/midnight/bars/bar-bottom.ini

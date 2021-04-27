@@ -39,9 +39,6 @@ cd ~/temp/regolith-config/gdm-theme/theme
 glib-compile-resources gnome-shell-theme.gresource.xml
 sudo cp gnome-shell-theme.gresource /usr/share/gnome-shell
 
-# grub theme
-echo "GRUB_THEME=\"/usr/share/grub/themes/Vimix/theme.txt\""
-
 yay -S betterlockscreen
 
 # copy configs etc.
@@ -54,6 +51,11 @@ chmod +x ~/.config/polybar/midnight/scripts/*.sh
 sudo cp -r ~/temp/regolith-config/etc /
 sudo cp -r ~/temp/regolith-config/usr /
 cd ~/temp
+
+# grub theme
+sudo cp ~/Pictures/itanium/background.jpeg /usr/share/grub/themes/Vimix
+echo "GRUB_THEME=\"/usr/share/grub/themes/Vimix/theme.txt\"" | sudo tee -a /etc/default/grub
+sudo grub-mkconfig -o /boot/grub/grub.cfg
 
 # lock screen setup
 betterlockscreen -u ~/Pictures/itanium/background.jpg

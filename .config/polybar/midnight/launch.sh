@@ -13,5 +13,8 @@ while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 # Launch the bar
 polybar -q top -c "$DIR"/config.ini &
 polybar -q bottom -c "$DIR"/config.ini &
+polybar -q top2 -c "$DIR"/config.ini &
+polybar -q bottom2 -c "$DIR"/config.ini &
 
-#for i in $(polybar -m | awk -F: '{print $1}'); do MONITOR=$i polybar -q main -c "$DIR"/config.ini & done
+
+#for i in $(polybar -m | awk -F: '{print $1}'); do MONITOR=$i polybar -q top -c "$DIR"/config.ini & polybar -q bottom -c "$DIR"/config.ini & done
